@@ -1,8 +1,29 @@
+import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import Vue from '@vitejs/plugin-vue';
+import Pages from 'vite-plugin-pages';
+import Layouts from 'vite-plugin-vue-layouts';
+import ViteComponents from 'vite-plugin-components';
 import WindiCSS from 'vite-plugin-windicss';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-   plugins: [Vue(), WindiCSS()]
+   resolve: {
+      alias: {
+         '~': resolve(__dirname, 'src'),
+         '@assets': resolve(__dirname, 'src/assets'),
+         '@styles': resolve(__dirname, 'src/assets/styles')
+      }
+   },
+
+   plugins: [
+      Vue(),
+      Pages({
+         routeBlockLang: 'yaml'
+      }),
+      Layouts({
+         layoutsDir: 'src/components/layouts'
+      }),
+      ViteComponents(),
+      WindiCSS()
+   ]
 });
