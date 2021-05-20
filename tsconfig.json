@@ -20,10 +20,16 @@
 
       "paths": {
          "~/*": ["src/*"],
-         "@assets": ["src/assets/*"],
-         "@styles": ["src/assets/styles/*"]
+         "@assets/*": ["src/assets/*"],
+         "@styles/*": ["src/assets/styles/*"]
       }
    },
-   "include": ["**.ts", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.vue"],
+   "include": [
+      "**.js",
+      "**.ts",
+      "src/**/*.ts",
+      "src/**/*.d.ts",
+      "src/**/*.vue"
+   ],
    "exclude": ["dist", "node_modules"]
 }
