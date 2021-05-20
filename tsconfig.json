@@ -16,7 +16,7 @@
       "forceConsistentCasingInFileNames": true,
 
       "lib": ["DOM", "ESNext"],
-      "types": ["vite/client"],
+      "types": ["vite/client", "vite-plugin-vue-layouts/client", "@types/node"],
 
       "paths": {
          "~/*": ["src/*"],
