@@ -4,7 +4,7 @@ module.exports = {
       browser: true,
       node: true,
    },
-   plugins: ['import'],
+   plugins: ['@typescript-eslint', 'import'],
    extends: [
       'plugin:vue/vue3-strongly-recommended',
       'plugin:vue/vue3-recommended',
@@ -19,8 +19,11 @@ module.exports = {
 
    parserOptions: {
       ecmaVersion: 2021,
+      sourceType: 'module',
       project: './tsconfig.json',
-      sourceType: 'module'
+      parser: '@typescript-eslint/parser',
+      tsconfigRootDir: __dirname,
+      extraFileExtensions: ['.vue']
    },
 
    settings: {
@@ -31,11 +34,6 @@ module.exports = {
    },
 
    overrides: [
-      {
-         files: ['*.ts'],
-         parser: '@typescript-eslint/parser',
-         plugins: ['@typescript-eslint', 'import']
-      },
       {
          files: ['*.vue'],
          parser: 'vue-eslint-parser',
