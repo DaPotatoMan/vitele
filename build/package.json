@@ -1,0 +1,13 @@
+{
+   "keywords": [
+      "vue"
+   ],
+   "main": "./lib.umd.js",
+   "module": "./lib.es.js",
+   "exports": {
+      ".": {
+         "import": "./lib.es.js",
+         "require": "./lib.umd.js"
+      }
+   }
+}
