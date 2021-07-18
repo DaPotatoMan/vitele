@@ -6,10 +6,6 @@ module.exports = {
    },
    plugins: ['@typescript-eslint', 'import'],
    extends: [
-      'plugin:vue/vue3-strongly-recommended',
-      'plugin:vue/vue3-recommended',
-      'plugin:vue/vue3-recommended',
-
       'eslint:recommended',
       'plugin:import/recommended',
       'plugin:import/typescript',
@@ -36,6 +32,7 @@ module.exports = {
    overrides: [
       {
          files: ['*.vue'],
+         extends: ['plugin:vue/vue3-recommended'],
          parser: 'vue-eslint-parser',
          parserOptions: {
             parser: '@typescript-eslint/parser',
