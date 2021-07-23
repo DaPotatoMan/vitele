@@ -7,6 +7,7 @@ module.exports = {
    plugins: ['@typescript-eslint', 'import'],
    extends: [
       'eslint:recommended',
+      'plugin:vue/vue3-recommended',
       'plugin:import/recommended',
       'plugin:import/typescript',
       'airbnb-typescript/base',
@@ -32,7 +33,6 @@ module.exports = {
    overrides: [
       {
          files: ['*.vue'],
-         extends: ['plugin:vue/vue3-recommended'],
          parser: 'vue-eslint-parser',
          parserOptions: {
             parser: '@typescript-eslint/parser',
@@ -40,6 +40,20 @@ module.exports = {
          rules: {
             'no-unused-vars': 'off',
             '@typescript-eslint/no-unused-vars': 'off',
+
+            'vue/html-indent': ['error', 3],
+            'vue/component-tags-order': 'off',
+            'vue/singleline-html-element-content-newline': 'off',
+            'vue/max-attributes-per-line': [
+               'error',
+               {
+                  singleline: 3,
+                  multiline: {
+                     max: 1,
+                     allowFirstLine: false,
+                  },
+               },
+            ],
          },
       },
    ],
@@ -56,20 +70,6 @@ module.exports = {
       '@typescript-eslint/indent': ['error', 3],
       '@typescript-eslint/comma-dangle': 'off',
       '@typescript-eslint/no-empty-function': 'off',
-
-      'vue/html-indent': ['error', 3],
-      'vue/component-tags-order': 'off',
-      'vue/singleline-html-element-content-newline': 'off',
-      'vue/max-attributes-per-line': [
-         'error',
-         {
-            singleline: 3,
-            multiline: {
-               max: 1,
-               allowFirstLine: false,
-            },
-         },
-      ],
 
       'no-param-reassign': 'warn',
       'import/prefer-default-export': 'off',
