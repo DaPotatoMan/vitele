@@ -1,14 +1,15 @@
 html {
-   @apply
-   w-screen overflow-hidden
+   @apply overflow-hidden overflow-y-auto
    font-sans font-normal text-base
-   antialiased;
+   bg-default text-default/90 antialiased;
 }
 
-body {
-   @apply h-screen mx-auto overflow-y-auto;
-}
-
+html,
+body,
 #app {
-   @apply h-full;
+   @apply h-full w-full;
+}
+
+* {
+   scrollbar-width: thin;
 }

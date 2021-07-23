@@ -1,9 +1,9 @@
-.page-fade {
+.fade {
    &-enter-active {
-      transition: opacity 550ms ease-out;
+      transition: opacity 250ms ease-out;
    }
    &-leave-active {
-      transition: opacity 550ms ease-in;
+      transition: opacity 250ms ease-in;
    }
 
    &-enter-from {
@@ -17,19 +17,22 @@
 
 .fade-slide-up,
 .fade-slide-down {
-   &-enter-active, &-leave-active {
-      transition: all 550ms ease;
+   &-enter-active,
+   &-leave-active {
+      transition: all 350ms ease;
       transition-property: transform, opacity;
    }
 
-   &-enter-from, &-leave-to {
+   &-enter-from,
+   &-leave-to {
       opacity: 0;
       transform: translateY(25px);
    }
 }
 
 .fade-slide-down {
-   &-enter-from, &-leave-to {
+   &-enter-from,
+   &-leave-to {
       transform: translateY(-25px);
    }
 }
