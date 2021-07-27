@@ -28,6 +28,6 @@
          "@styles/*": ["src/assets/styles/*"]
       }
    },
-   "include": ["**.js", "**.ts", "src/**/*.ts", "src/**/*.vue"],
+   "include": ["**/*.js", "**/*.ts", "src/**/*.vue"],
    "exclude": ["dist", "node_modules"]
 }
