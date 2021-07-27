@@ -6,24 +6,29 @@ import Layouts from 'vite-plugin-vue-layouts';
 import ViteComponents from 'vite-plugin-components';
 import WindiCSS from 'vite-plugin-windicss';
 
+const resolveSrc = (path: string) => `src/render/${path}`;
+
 export default defineConfig({
    resolve: {
       alias: {
-         '~': resolve(__dirname, 'src'),
-         '@assets': resolve(__dirname, 'src/assets'),
-         '@styles': resolve(__dirname, 'src/assets/styles')
+         '~': resolve(__dirname, 'src/render/'),
+         '@assets': resolve(__dirname, 'src/render/assets'),
+         '@styles': resolve(__dirname, 'src/render/assets/styles')
       }
    },
 
    plugins: [
       Vue(),
       Pages({
-         routeBlockLang: 'yaml'
+         routeBlockLang: 'yaml',
+         pagesDir: resolveSrc('pages')
       }),
       Layouts({
-         layoutsDir: 'src/components/layouts'
+         layoutsDir: resolveSrc('components/layouts')
       }),
-      ViteComponents(),
+      ViteComponents({
+         dirs: resolveSrc('components')
+      }),
       WindiCSS()
    ]
 });

@@ -1,7 +1,7 @@
 {
    "compilerOptions": {
       "baseUrl": ".",
-      "target": "es2016",
+      "target": "ES6",
       "module": "ESNext",
       "moduleResolution": "node",
       "incremental": false,
@@ -23,11 +23,11 @@
          "@types/node"
       ],
       "paths": {
-         "~/*": ["src/*"],
-         "@assets/*": ["src/assets/*"],
-         "@styles/*": ["src/assets/styles/*"]
+         "~/*": ["src/render/*"],
+         "@assets/*": ["src/render/assets/*"],
+         "@styles/*": ["src/render/assets/styles/*"]
       }
    },
-   "include": ["**.js", "**.ts", "src/**/*.ts", "src/**/*.vue"],
-   "exclude": ["dist", "node_modules"]
+   "include": ["./**/*.ts", "**/*.js", "src/render/**/*.vue"],
+   "exclude": ["dist", "node_modules", "src/main/*.js"]
 }
