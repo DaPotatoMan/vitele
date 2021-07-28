@@ -19,7 +19,7 @@
     "vite-plugin-components": "0.13.2",
     "vite-plugin-pages": "0.13.1",
     "vite-plugin-vue-layouts": "0.3.1",
-    "vite-plugin-windicss": "1.0.4",
+    "vite-plugin-windicss": "1.2.7",
     "vue-tsc": "0.1.7",
     "windicss": "3.1.6"
   },
