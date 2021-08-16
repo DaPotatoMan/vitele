@@ -1,11 +1,11 @@
-const { ignoreFiles } = require('./utils');
+const { ignoreFiles, ignoreModulesExcept } = require('./utils');
 
 module.exports = {
    packagerConfig: {
       asar: true,
       ignore: [
          ...ignoreFiles('.', ['dist', 'package.json', 'node_modules', 'LICENSE']),
-         /^\/node_modules\/((?!electron-squirrel-startup).)*$/,
+         ignoreModulesExcept(['electron-squirrel-startup'])
       ],
    },
    makers: [

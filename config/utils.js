@@ -10,6 +10,12 @@ function ignoreFiles(dir = '.', exclude = []) {
    return list;
 }
 
+function ignoreModulesExcept(deps = []) {
+   const regex = new RegExp(`^/node_modules/((?!${deps.join('|')}).)*$`);
+   return regex;
+}
+
 module.exports = {
-   ignoreFiles
+   ignoreFiles,
+   ignoreModulesExcept
 };
