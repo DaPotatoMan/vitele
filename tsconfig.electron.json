@@ -1,19 +1,25 @@
 {
    "compilerOptions": {
+      "baseUrl": ".",
+      "outDir": "dist",
       "target": "ESNext",
-      "module": "CommonJS",
-      "moduleResolution": "node",
+      "module": "commonjs",
       "strict": true,
-      "resolveJsonModule": true,
-      "esModuleInterop": true,
       "allowJs": true,
-      "outDir": "dist/main",
-
+      "sourceMap": true,
+      "strictNullChecks": true,
+      "skipLibCheck": true,
       "incremental": false,
       "noUnusedLocals": true,
-      "strictNullChecks": true,
       "importHelpers": true,
-      "forceConsistentCasingInFileNames": true
+      "esModuleInterop": true,
+      "resolveJsonModule": true,
+      "moduleResolution": "node",
+      "forceConsistentCasingInFileNames": true,
+
+      "paths": {
+         "*": ["node_modules/*"]
+      }
    },
-   "include": ["src/main/app.ts", "src/main/preload.js"]
+   "include": ["src/main/*"]
 }

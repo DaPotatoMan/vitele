@@ -1,23 +1,18 @@
-import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import Vue from '@vitejs/plugin-vue';
 import Pages from 'vite-plugin-pages';
 import Layouts from 'vite-plugin-vue-layouts';
 import ViteComponents from 'vite-plugin-components';
 import WindiCSS from 'vite-plugin-windicss';
+import TSPaths from 'vite-tsconfig-paths';
 
-const resolveSrc = (path: string) => `src/render/${path}`;
+const resolveSrc = (path: string) => `src/renderer/${path}`;
 
 export default defineConfig({
-   resolve: {
-      alias: {
-         '~': resolve(__dirname, 'src/render/'),
-         '@assets': resolve(__dirname, 'src/render/assets'),
-         '@styles': resolve(__dirname, 'src/render/assets/styles')
-      }
-   },
+   base: './',
 
    plugins: [
+      TSPaths(),
       Vue(),
       Pages({
          routeBlockLang: 'yaml',

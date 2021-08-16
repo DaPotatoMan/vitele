@@ -1,26 +1,17 @@
-import { app, BrowserWindow } from 'electron';
 import { join } from 'path';
-import reloader from 'electron-reloader';
+import { app, BrowserWindow } from 'electron';
+
+if (require('electron-squirrel-startup')) app.quit();
 
 const isDevelopment = process.env.NODE_ENV === 'development';
-
-if (isDevelopment) {
-   try {
-      reloader(module, {
-         ignore: ['src/render']
-      });
-   } catch (e) {
-      //
-   }
-}
 
 class App {
    window = null as Electron.BrowserWindow | null;
 
-   constructor() {
-      app.whenReady().then(() => this.createWindow());
-      app.on('window-all-closed', () => this.close());
+   init() {
+      app.on('ready', () => this.createWindow());
       app.on('activate', () => this.activate());
+      app.on('window-all-closed', () => this.quit());
    }
 
    createWindow() {
@@ -35,20 +26,22 @@ class App {
 
       if (isDevelopment) {
          this.window.loadURL('http://localhost:3000');
-         this.window.webContents.openDevTools();
+         this.window.webContents.openDevTools({
+            mode: 'detach'
+         });
       } else {
-         this.window.loadFile('dist/render/index.html');
+         this.window.loadFile('./dist/index.html');
       }
    }
 
-   close() {
+   quit() {
       if (process.platform !== 'darwin') {
          app.quit();
          this.window = null;
       }
    }
 
-   activate() {
+   private activate() {
       const windows = BrowserWindow.getAllWindows();
 
       if (windows.length === 0) {
@@ -57,4 +50,6 @@ class App {
    }
 }
 
+// Init App
 const instance = new App();
+instance.init();

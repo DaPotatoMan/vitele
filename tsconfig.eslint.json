@@ -13,19 +13,13 @@
       "resolveJsonModule": true,
       "moduleResolution": "node",
       "forceConsistentCasingInFileNames": true,
-
-      "lib": ["DOM", "ESNext"],
-      "types": [
-         "vite/client",
-         "vite-plugin-pages/client",
-         "vite-plugin-vue-layouts/client"
-      ],
-      "paths": {
-         "~/*": ["src/renderer/*"],
-         "@assets/*": ["src/renderer/assets/*"],
-         "@styles/*": ["src/renderer/assets/styles/*"]
-      }
+      "allowJs": true,
    },
-   "include": ["src/**/*.ts", "src/renderer/**/*.vue"],
+   "include": [
+      ".eslintrc.js",
+      "./**/*.js",
+      "./**/*.ts",
+      "src/renderer/**/*.vue"
+   ],
    "exclude": ["node_modules", "dist"]
 }

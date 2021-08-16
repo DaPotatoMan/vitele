@@ -5,7 +5,7 @@ function routeHandler(
    from: RouteLocationNormalized,
    next: NavigationGuardNext
 ): void {
-   const { requiresAuth } = to.meta;
+   // const { requiresAuth } = to.meta;
    next();
 }
 

@@ -17,7 +17,7 @@ export default defineConfig({
          },
 
          backgroundColor: {
-            default: '#f8f6f5',
+            default: '#f2f2f2',
             'default-elevated': '#fff',
             inverse: '#000'
          }
