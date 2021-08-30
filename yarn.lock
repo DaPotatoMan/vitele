@@ -9,13 +9,6 @@
   dependencies:
     "@types/throttle-debounce" "^2.1.0"
 
-"@antfu/utils@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@antfu/utils/-/utils-0.2.4.tgz#c7d33fc6faa0d3a6fcc2555673f5e9b19c0fbc15"
-  integrity sha512-2bZNkVfL9IZESmvE26UKi8SzyvSoaIsGXDcnbHFMtmGMqUiB1fXpAJ1ijGf+tSqKRQ5yagck2U1Qk0p+705/kw==
-  dependencies:
-    "@types/throttle-debounce" "^2.1.0"
-
 "@babel/code-frame@7.12.11":
   version "7.12.11"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.12.11.tgz#f4ad435aa263db935b8f10f2c552d23fb716a63f"
@@ -1630,7 +1623,7 @@ fast-glob@^3.1.1, fast-glob@^3.2.5:
     micromatch "^4.0.2"
     picomatch "^2.2.1"
 
-fast-glob@^3.2.6, fast-glob@^3.2.7:
+fast-glob@^3.2.7:
   version "3.2.7"
   resolved "https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.7.tgz#fd6cb7a2d7e9aa7a7846111e85a196d6b2f766a1"
   integrity sha512-rYGMRwip6lUMvYD3BTScMwT1HtAs2d71SMv66Vrxs0IekGZEjhM0pcMfjQPnknBt2zeCwQMEupiN02ZP4DiT1Q==
@@ -3890,13 +3883,13 @@ vfile@^4.0.0, vfile@^4.0.1:
     unist-util-stringify-position "^2.0.0"
     vfile-message "^2.0.0"
 
-vite-plugin-components@0.13.2:
-  version "0.13.2"
-  resolved "https://registry.yarnpkg.com/vite-plugin-components/-/vite-plugin-components-0.13.2.tgz#9e1b1b90ca8a817954f5ac5ecc24dbbdf1cc1684"
-  integrity sha512-Fv5iTlZUvqUUjODdAkTadijobcys+SvrtYclj27/SCE7b4LtwNySd+nHvJcGI/GsL8npTdccj2IRwGsWLrTcvQ==
+vite-plugin-components@0.13.3:
+  version "0.13.3"
+  resolved "https://registry.yarnpkg.com/vite-plugin-components/-/vite-plugin-components-0.13.3.tgz#8bda0f508ee90249a066ba63d5985798e5ca9fed"
+  integrity sha512-6vLWPrEqFSW7REYvux/WVwxsytg/DcstVhdgAT806cZi/KGiQgB8dyFnLkrkFawxUQruuGkLWfS99Z/64mMC0w==
   dependencies:
     debug "^4.3.2"
-    fast-glob "^3.2.6"
+    fast-glob "^3.2.7"
     magic-string "^0.25.7"
     minimatch "^3.0.4"
 
