@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 import Vue from '@vitejs/plugin-vue';
 import Pages from 'vite-plugin-pages';
 import Layouts from 'vite-plugin-vue-layouts';
+import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import WindiCSS from 'vite-plugin-windicss';
 
@@ -23,6 +24,12 @@ export default defineConfig({
       Layouts({
          layoutsDir: 'src/components/layouts'
       }),
+
+      AutoImport({
+         imports: ['vue', 'vue-router'],
+         dts: './types/auto-imports.d.ts'
+      }),
+
       Components({
          dts: './types/components.d.ts'
       }),
