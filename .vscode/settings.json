@@ -1,0 +1,11 @@
+{
+   "typescript.tsdk": "node_modules/typescript/lib",
+   "files.associations": {
+      "*.*css": "sass"
+   },
+   "volar.tsPlugin": false,
+   "volar.tsPluginStatus": false,
+   "[vue]": {
+      "editor.defaultFormatter": "johnsoncodehk.volar"
+   }
+}
