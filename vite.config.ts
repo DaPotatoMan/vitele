@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 import Vue from '@vitejs/plugin-vue';
 import Pages from 'vite-plugin-pages';
 import Layouts from 'vite-plugin-vue-layouts';
-import ViteComponents from 'vite-plugin-components';
+import Components from 'unplugin-vue-components/vite';
 import WindiCSS from 'vite-plugin-windicss';
 
 export default defineConfig({
@@ -23,7 +23,9 @@ export default defineConfig({
       Layouts({
          layoutsDir: 'src/components/layouts'
       }),
-      ViteComponents(),
+      Components({
+         dts: './types/components.d.ts'
+      }),
       WindiCSS()
    ]
 });
