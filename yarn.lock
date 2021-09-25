@@ -417,7 +417,7 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.18.tgz#f601356e14e455428e5db8281c966ba4c1bc3403"
   integrity sha512-vFa2annVlbI082ICC3BH239UFO66nn2Syxy9shI7N2haPrc4rFRyNuDjWKJRe3sX7py4yhYL7fopB5tWGwGVyA==
 
-"@vueuse/core@^6.4.1":
+"@vueuse/core@6.4.1":
   version "6.4.1"
   resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-6.4.1.tgz#21416997a23bfb4924a5082ed6fa959027f80d04"
   integrity sha512-FRFeEPVq77gcMZP0mCloJY+lyHJaUQmUMaPp5fBds3fs/BbkAt7HTMMizFKHWDVjbmA20vBOjmC9tTnfD+DdEA==
@@ -425,7 +425,7 @@
     "@vueuse/shared" "6.4.1"
     vue-demi "*"
 
-"@vueuse/head@^0.6.0":
+"@vueuse/head@0.6.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@vueuse/head/-/head-0.6.0.tgz#5584b1f724327cfce941c42efec9e590f5799329"
   integrity sha512-fi7ZjkMpEAUtTT6iR5wgL2HkX1+3zbrmbpcwU//RgJIWEr5b42jk8E9yOheaC2dYAAHzelAllVpX0pDmhcTXuw==
@@ -2747,7 +2747,7 @@ unbox-primitive@^1.0.0, unbox-primitive@^1.0.1:
     has-symbols "^1.0.2"
     which-boxed-primitive "^1.0.2"
 
-unplugin-auto-import@^0.4.8:
+unplugin-auto-import@0.4.8:
   version "0.4.8"
   resolved "https://registry.yarnpkg.com/unplugin-auto-import/-/unplugin-auto-import-0.4.8.tgz#232c35a0e44ee30a62d50a89d07a1c50ddf7fd4e"
   integrity sha512-qK7loR5lz1ctkw9cXBpNxelkYVGqQnyBdtDX7vX12MCEJpddNnKzxgKq/vAK+7VDoojQ2RU14++V7DeV/+SoDw==
@@ -2759,7 +2759,7 @@ unplugin-auto-import@^0.4.8:
     resolve "^1.20.0"
     unplugin "^0.2.15"
 
-unplugin-vue-components@^0.15.3:
+unplugin-vue-components@0.15.3:
   version "0.15.3"
   resolved "https://registry.yarnpkg.com/unplugin-vue-components/-/unplugin-vue-components-0.15.3.tgz#655a9d511d71b591a2ec2b3374e8ba3c330b9f30"
   integrity sha512-y358MXjvfmAqo/n/BKwl2QP5cbo0Npj37FbWig+9BKREMMPvZRIBNK8z4E9+ewriDAXGHcKAbHmXCinZf30hBA==
@@ -3001,7 +3001,7 @@ vue-eslint-parser@^7.10.0:
     lodash "^4.17.21"
     semver "^6.3.0"
 
-vue-router@^4.0.11:
+vue-router@4.0.11:
   version "4.0.11"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.11.tgz#cd649a0941c635281763a20965b599643ddc68ed"
   integrity sha512-sha6I8fx9HWtvTrFZfxZkiQQBpqSeT+UCwauYjkdOQYRvwsGwimlQQE2ayqUwuuXGzquFpCPoXzYKWlzL4OuXg==
@@ -3015,7 +3015,7 @@ vue-tsc@0.3.0:
   dependencies:
     vscode-vue-languageservice "^0.27.0"
 
-vue@^3.2.18:
+vue@3.2.18:
   version "3.2.18"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.2.18.tgz#7791cbacb7e4193cf866eaac13ca61b912ce8eb6"
   integrity sha512-5HjXmnntBcFOdjqXzi4fxPENcl8MOrfUycr/iY+Th/NNNaZfa5BLPHk9Gc28fWCGbZT1U6XkkiEYysxY49lGuQ==
