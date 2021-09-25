@@ -16,6 +16,12 @@ export default defineConfig({
       }
    },
 
+   server: {
+      fs: {
+         strict: true
+      }
+   },
+
    plugins: [
       Vue(),
       Pages({
