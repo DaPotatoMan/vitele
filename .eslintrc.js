@@ -1,33 +1,35 @@
 module.exports = {
    env: {
-      es6: true,
+      es2021: true,
       browser: true,
-      node: true,
+      node: true
    },
    plugins: ['@typescript-eslint', 'import'],
    extends: [
       'eslint:recommended',
-      'plugin:vue/vue3-recommended',
       'plugin:import/recommended',
       'plugin:import/typescript',
-      'airbnb-typescript/base',
+      'plugin:vue/vue3-recommended',
       'plugin:@typescript-eslint/recommended',
+      'airbnb-typescript/base'
    ],
 
+   parser: '@typescript-eslint/parser',
    parserOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
       project: './tsconfig.json',
-      parser: '@typescript-eslint/parser',
       tsconfigRootDir: __dirname,
       extraFileExtensions: ['.vue']
    },
 
    settings: {
       'import/resolver': {
-         node: { extensions: ['.js', '.mjs', '.ts', '.vue'] },
+         node: {
+            extensions: ['.js', '.ts', '.vue']
+         },
          typescript: {}
-      },
+      }
    },
 
    overrides: [
@@ -35,12 +37,11 @@ module.exports = {
          files: ['*.vue'],
          parser: 'vue-eslint-parser',
          parserOptions: {
-            parser: '@typescript-eslint/parser',
+            parser: '@typescript-eslint/parser'
          },
          rules: {
             'no-undef': 'off',
             'no-unused-vars': 'off',
-            '@typescript-eslint/no-unused-vars': 'off',
 
             'vue/html-indent': ['error', 3],
             'vue/component-tags-order': 'off',
@@ -51,12 +52,12 @@ module.exports = {
                   singleline: 3,
                   multiline: {
                      max: 1,
-                     allowFirstLine: false,
-                  },
-               },
-            ],
-         },
-      },
+                     allowFirstLine: false
+                  }
+               }
+            ]
+         }
+      }
    ],
 
    rules: {
@@ -77,8 +78,8 @@ module.exports = {
       'import/no-extraneous-dependencies': [
          'error',
          {
-            devDependencies: true,
-         },
+            devDependencies: true
+         }
       ]
-   },
+   }
 };
