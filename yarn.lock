@@ -417,6 +417,26 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.18.tgz#f601356e14e455428e5db8281c966ba4c1bc3403"
   integrity sha512-vFa2annVlbI082ICC3BH239UFO66nn2Syxy9shI7N2haPrc4rFRyNuDjWKJRe3sX7py4yhYL7fopB5tWGwGVyA==
 
+"@vueuse/core@^6.4.1":
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-6.4.1.tgz#21416997a23bfb4924a5082ed6fa959027f80d04"
+  integrity sha512-FRFeEPVq77gcMZP0mCloJY+lyHJaUQmUMaPp5fBds3fs/BbkAt7HTMMizFKHWDVjbmA20vBOjmC9tTnfD+DdEA==
+  dependencies:
+    "@vueuse/shared" "6.4.1"
+    vue-demi "*"
+
+"@vueuse/head@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@vueuse/head/-/head-0.6.0.tgz#5584b1f724327cfce941c42efec9e590f5799329"
+  integrity sha512-fi7ZjkMpEAUtTT6iR5wgL2HkX1+3zbrmbpcwU//RgJIWEr5b42jk8E9yOheaC2dYAAHzelAllVpX0pDmhcTXuw==
+
+"@vueuse/shared@6.4.1":
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/@vueuse/shared/-/shared-6.4.1.tgz#5bc84be107cead84e11c21d2c57b1e9f2c376975"
+  integrity sha512-zsaYxxZwACQbMmGg+UBjPUVemi325sDdnnB0mn+PNizE0fVC57B+vbLgdj45NBmr6P4nw6a0Y2rMupebwDWsdw==
+  dependencies:
+    vue-demi "*"
+
 "@windicss/config@1.4.5":
   version "1.4.5"
   resolved "https://registry.yarnpkg.com/@windicss/config/-/config-1.4.5.tgz#33ff2d4e1917a956c6a651fe4cf3e95c4f3917fb"
@@ -2962,6 +2982,11 @@ vscode-vue-languageservice@^0.27.0:
     vscode-languageserver-textdocument "^1.0.1"
     vscode-pug-languageservice "^0.27.24"
     vscode-typescript-languageservice "^0.27.24"
+
+vue-demi@*:
+  version "0.11.4"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.11.4.tgz#6101992fe4724cf5634018a16e953f3052e94e2a"
+  integrity sha512-/3xFwzSykLW2HiiLie43a+FFgNOcokbBJ+fzvFXd0r2T8MYohqvphUyDQ8lbAwzQ3Dlcrb1c9ykifGkhSIAk6A==
 
 vue-eslint-parser@^7.10.0:
   version "7.11.0"

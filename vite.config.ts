@@ -32,7 +32,7 @@ export default defineConfig({
       }),
 
       AutoImport({
-         imports: ['vue', 'vue-router'],
+         imports: ['vue', 'vue-router', '@vueuse/head', '@vueuse/core'],
          dts: './types/auto-imports.d.ts'
       }),
 
@@ -40,5 +40,10 @@ export default defineConfig({
          dts: './types/components.d.ts'
       }),
       WindiCSS()
-   ]
+   ],
+
+   optimizeDeps: {
+      include: ['vue', 'vue-router', '@vueuse/head', '@vueuse/core'],
+      exclude: ['vue-demi']
+   }
 });
