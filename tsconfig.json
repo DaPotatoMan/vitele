@@ -26,6 +26,6 @@
          "@styles/*": ["src/renderer/assets/styles/*"]
       }
    },
-   "include": ["src/**/*.ts", "src/renderer/**/*.vue"],
+   "include": ["types/*.d.ts", "src/**/*.ts", "src/renderer/**/*.vue"],
    "exclude": ["node_modules", "dist"]
 }

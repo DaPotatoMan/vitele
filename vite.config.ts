@@ -2,7 +2,8 @@ import { defineConfig } from 'vite';
 import Vue from '@vitejs/plugin-vue';
 import Pages from 'vite-plugin-pages';
 import Layouts from 'vite-plugin-vue-layouts';
-import ViteComponents from 'vite-plugin-components';
+import AutoImport from 'unplugin-auto-import/vite';
+import Components from 'unplugin-vue-components/vite';
 import WindiCSS from 'vite-plugin-windicss';
 import TSPaths from 'vite-tsconfig-paths';
 
@@ -14,6 +15,10 @@ export default defineConfig({
    plugins: [
       TSPaths(),
       Vue(),
+      AutoImport({
+         dts: './types/auto-import.d.ts',
+         imports: ['vue', 'vue-router']
+      }),
       Pages({
          routeBlockLang: 'yaml',
          pagesDir: resolveSrc('pages')
@@ -21,9 +26,15 @@ export default defineConfig({
       Layouts({
          layoutsDir: resolveSrc('components/layouts')
       }),
-      ViteComponents({
-         dirs: resolveSrc('components')
+      Components({
+         dirs: resolveSrc('components'),
+         dts: './types/auto-components.d.ts'
       }),
       WindiCSS()
-   ]
+   ],
+
+   optimizeDeps: {
+      include: ['vue', 'vue-router'],
+      exclude: ['vue-demi']
+   }
 });
